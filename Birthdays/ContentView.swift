@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
+            List { // for each friend that we input, we will be able to input the date of their birthday
                 ForEach(friends) { friend in
                     HStack {
                     Text(friend.name)
@@ -30,6 +30,7 @@ struct ContentView: View {
             
             .navigationTitle("Birthdays")
             
+            // Section where the input takes place :3
             .safeAreaInset(edge: .bottom) {
                 VStack(alignment: .center, spacing: 20) {
                     Text("New Birthday")
